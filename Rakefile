@@ -3,7 +3,7 @@ require "bundler/gem_tasks"
 require "rspec/core/rake_task"
 require "term/ansicolor"
 
-require "./lib/activeadmin/dark_color_scheme"
+require "./lib/input_attributes_from_validators"
 
 RSpec::Core::RakeTask.new(:spec)
 
@@ -13,29 +13,9 @@ load "rails/tasks/statistics.rake"
 
 task default: :spec
 
-desc "Dumps output to a CSS file for testing"
-task :debug do
-	require "sassc"
-
-	path = Activeadmin::DarkColorScheme.stylesheets_path
-	entrypoins = %w(_activeadmin-dark-color-scheme)
-
-	entrypoins.each do |file|
-		css = File.read("#{path}/#{file}.sass")
-		engine = SassC::Engine.new(css, syntax: :sass, load_paths: [path])
-		out = File.join("tmp", "#{file[1..-1]}.css")
-		css = engine.render
-		File.open(out, "w+") do |f|
-			f << css
-		end
-		$stderr.puts Term::ANSIColor.green "Compiled #{out}"
-		$stderr.puts css
-	end
-end
-
 # desc "Publish"
 # task :publish do
-# 	puts `gem push pkg/activeadmin_dark_color_scheme-#{Activeadmin::DarkColorScheme::VERSION}.gem`
+# 	puts `gem push pkg/activeadmin_dark_color_scheme-#{InputAttributesFromValidators::VERSION}.gem`
 # end
 
 # require 'rake/testtask'

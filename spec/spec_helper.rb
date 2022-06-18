@@ -1,5 +1,5 @@
 require "bundler/setup"
-require "activeadmin/dark_color_scheme"
+require "input_attributes_from_validators"
 # require "coveralls"
 
 Coveralls.wear!
