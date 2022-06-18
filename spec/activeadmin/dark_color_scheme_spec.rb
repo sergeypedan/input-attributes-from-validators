@@ -1,6 +1,6 @@
-RSpec.describe Activeadmin::DarkColorScheme do
+RSpec.describe InputAttributesFromValidators do
   it "has a version number" do
-    expect(Activeadmin::DarkColorScheme::VERSION).not_to be nil
+    expect(InputAttributesFromValidators::VERSION).not_to be nil
   end
 
   it "does something useful" do
