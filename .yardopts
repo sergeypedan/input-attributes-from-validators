@@ -1,0 +1,10 @@
+--title "Input attributes from validators"
+--no-private
+--protected
+--markup markdown
+-M redcarpet
+-
+app/helpers/*.rb
+lib/**/*.rb
+CHANGELOG.md
+README.md
