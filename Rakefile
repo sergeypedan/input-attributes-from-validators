@@ -24,7 +24,7 @@ task default: :spec
 
 # desc "Publish"
 # task :publish do
-# 	puts `gem push pkg/activeadmin_dark_color_scheme-#{InputAttributesFromValidators::VERSION}.gem`
+# 	puts `gem push pkg/input_attributes_from_validators-#{InputAttributesFromValidators::VERSION}.gem`
 # end
 
 # require 'rake/testtask'
